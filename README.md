@@ -37,3 +37,18 @@ You will learn how to use Jasmine to write a number of tests against a pre-exist
 12. Write a test that ensures when the loadFeed function is called and completes its work, there is at least a single .entry element within the .feed container. Remember, loadFeed() is asynchronous so this test wil require the use of Jasmine's beforeEach and asynchronous done() function.
 13. Write a test that ensures when a new feed is loaded by the loadFeed function that the content actually changes. Remember, loadFeed() is asynchronous.
 14. When complete - all of your tests should pass.
+
+# How to run this project?
+
+* Launch the index.html located at the root of the project
+* The bottom of the page should show the Jasmine results
+
+# What is being tested in this project
+
+1. All RSS feeds are defined and not empty.
+2. The RSS feed URLS are defined, not empty and start with http or https
+3. The RSS feed names are defined and not empty
+4. The menu element is hidden by default
+5. On clicking the menu icon, it becomes visible and on clicking again, it becomes hidden
+6. When a feed is loaded, we verify that there is at least one .entry element in the .feed container
+7. When a new feed is loaded, we verify that the content actually changes
