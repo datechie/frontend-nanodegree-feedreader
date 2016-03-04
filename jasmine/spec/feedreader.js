@@ -35,12 +35,12 @@
          * with http or https
          */
         function testEachFeedInallFeeds(feed) {
-         	it('have defined URLs and start with http', function() {
+         	it('have defined URLs, are not empty and start with http', function() {
 				var checkURL = allFeeds[feed].url;
 				expect(checkURL).toBeDefined(); // Is the URL defined?
 				expect(typeof checkURL).toEqual('string'); // check for String type                    
 				expect(checkURL).not.toEqual(""); // check not empty                
-				expect(checkURL).not.toBe(0);   // is not of length 0
+				expect(checkURL.length).not.toBe(0);   // is not of length 0
 				expect(checkURL).toMatch(/^http(s?)\:\/\//);  // Does the URL start with http or https? 
 			});
         }
@@ -66,7 +66,7 @@
 				expect(checkName).toBeDefined(); // check that the name is defined
 				expect(typeof checkName).toEqual('string'); // check for String type                
 				expect(checkName).not.toEqual(""); // check not empty                
-				expect(checkName).not.toBe(0);   // check the Name is not of length 0
+				expect(checkName.length).not.toBe(0);   // check the Name is not of length 0
             });
         }  
 
@@ -111,7 +111,7 @@
          */  
         // we load a feed
 		beforeEach(function(done) {
-			loadFeed(0, done)
+			loadFeed(0, done);
 		});
         // and check that the entry length is not 0
 		it('has at least one entry', function() {   
